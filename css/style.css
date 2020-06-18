@@ -436,7 +436,7 @@ select {
 
 .l-inner {
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 0;
   width: 1080px;
   max-width: 100%;
   height: inherit;
@@ -444,8 +444,8 @@ select {
 
 @media (min-width: 768px) {
   .l-inner {
-    padding-right: 32px;
-    padding-left: 32px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -1944,7 +1944,7 @@ select {
   text-align: center;
   font-weight: 700;
   color: #fff;
-  padding: 0 24px;
+  padding: 0 0;
 }
 
 .c-mainvisual__title {
@@ -10444,6 +10444,16 @@ header .header-logo {
   line-height: 1.21212;
 }
 
+@media (max-width: 767px) {
+  header .header-logo {
+    margin: 70px auto;
+    font-size: 38px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 27.14286/remrem;
+    line-height: 1.05263;
+  }
+}
+
 header .header-logo a {
   text-decoration: none;
 }
@@ -10457,6 +10467,12 @@ header .c-navigation {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 767px) {
+  header .c-navigation {
+    display: none;
+  }
 }
 
 header .c-navigation .navigation-item {
@@ -10549,6 +10565,26 @@ header .c-navigation .navigation-item a:hover:after {
   /*IE9以下で反映されるよう記述*/
   font-size: 12.85714/remrem;
   line-height: 1.44444;
+}
+
+@media (max-width: 1079px) {
+  .p-main article .c-card .c-card__body .c-card__title {
+    font-size: 14px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 10/remrem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 767px) {
+  .p-main article .c-card .c-card__body .c-card__title {
+    font-size: 12px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 8.57143/remrem;
+    font-weight: 500;
+    line-height: 1.5;
+  }
 }
 
 .p-main article .c-card .c-card__body .c-card__meta {
@@ -10834,6 +10870,12 @@ header .c-navigation .navigation-item a:hover:after {
   padding-right: 3rem;
 }
 
+@media (max-width: 767px) {
+  .l-footer .footer-menu .l-row--padding .l-row__col {
+    margin-bottom: 20px;
+  }
+}
+
 .l-footer .footer-menu .footer-logo {
   margin: 0 auto 20px;
 }
@@ -10856,8 +10898,20 @@ header .c-navigation .navigation-item a:hover:after {
   padding-bottom: 20px;
 }
 
+@media (max-width: 767px) {
+  .l-footer .footer-menu .footer-text p {
+    font-size: 15px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 10.71429/remrem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
 .l-footer .footer-menu .download-btn {
   margin: 0 auto 75px;
+  width: 100%;
+  text-align: center;
 }
 
 .l-footer .footer-menu .download-btn .c-button {
@@ -10868,6 +10922,17 @@ header .c-navigation .navigation-item a:hover:after {
   transition: 0.3s;
 }
 
+@media (max-width: 767px) {
+  .l-footer .footer-menu .download-btn .c-button {
+    width: 80%;
+    font-size: 15px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 10.71429/remrem;
+    font-weight: 600;
+    line-height: 1.66667;
+  }
+}
+
 .l-footer .footer-menu .download-btn .c-button:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -10876,6 +10941,13 @@ header .c-navigation .navigation-item a:hover:after {
 .l-footer .footer-menu .c-list {
   padding: 0;
   margin-left: -5px;
+}
+
+@media (max-width: 767px) {
+  .l-footer .footer-menu .c-list li:not(:last-of-type) {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #ffffff;
+  }
 }
 
 .l-footer .footer-menu .c-list li a {
@@ -10890,6 +10962,16 @@ header .c-navigation .navigation-item a:hover:after {
 
 .l-footer .footer-menu .c-list li a:hover {
   margin-left: 3px;
+}
+
+@media (max-width: 767px) {
+  .l-footer .footer-menu .c-list li a {
+    font-size: 14px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 10/remrem;
+    font-weight: 600;
+    line-height: 1.85714;
+  }
 }
 
 .l-footer .footer-menu .c-list li a .fas {
@@ -10940,5 +11022,18 @@ header .c-navigation .navigation-item a:hover:after {
   font-size: 10.71429/remrem;
   font-weight: 500;
   line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .c-heading--type008 {
+    border-bottom: 2px solid #9acc1e;
+    border-left: none;
+    padding-bottom: 10px;
+    font-size: 18px;
+    /*IE9以下で反映されるよう記述*/
+    font-size: 12.85714/remrem;
+    font-weight: 500;
+    line-height: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */

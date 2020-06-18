@@ -67,6 +67,10 @@ header {
     margin: 51px auto;
     text-align: center;
     @include fz(33, 40, 400);
+    @include mq-down(sp) {
+      margin: 70px auto;
+      @include fz(38, 40);
+    }
     a {
       text-decoration: none;
     }
@@ -76,6 +80,9 @@ header {
   }
   .c-navigation {
     justify-content: center;
+    @include mq-down(sp) {
+      display: none;
+    }
     .navigation-item {
       margin: 0;
       a {
@@ -126,6 +133,12 @@ header {
         .c-card__title {
           padding-bottom: 20px;
           @include fz(18, 26);
+          @include mq-down(tab) {
+            @include fz(14, 21, 400);
+          }
+          @include mq-down(sp) {
+            @include fz(12, 18, 500);
+          }
         }
         .c-card__meta {
           position: absolute;
@@ -339,6 +352,9 @@ header {
         &:first-child {
           padding-right: 3rem;
         }
+        @include mq-down(sp) {
+          margin-bottom: 20px;
+        }
       }
     }
     .footer-logo {
@@ -355,15 +371,24 @@ header {
         &:not(:last-child) {
           padding-bottom: 20px;
         }
+        @include mq-down(sp) {
+          @include fz(15, 25, 600);
+        }
       }
     }
     .download-btn {
       margin: 0 auto 75px;
+      width: 100%;
+      text-align: center;
       .c-button {
         padding: 7px 50px;
         background-color: $color-accent;
         border-radius: 10em;
         transition: 0.3s;
+        @include mq-down(sp) {
+          width: 80%;
+          @include fz(15, 25, 600);
+        }
         &:hover {
           transform: scale(1.1);
         }
@@ -373,11 +398,20 @@ header {
       padding: 0;
       margin-left: -5px;
       li {
+        @include mq-down(sp) {
+          &:not(:last-of-type) {
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ffffff;
+          }
+        }
         a {
           @include fz(11, 17, 300);
           transition: 0.3s;
           &:hover {
             margin-left: 3px;
+          }
+          @include mq-down(sp) {
+            @include fz(14, 26, 600);
           }
           .fas {
             margin-right: 5px;
@@ -417,4 +451,10 @@ header {
   padding: 0 10px;
   border-color: $color-key;
   @include fz(15, 15, 500);
+  @include mq-down(sp) {
+    border-bottom: 2px solid $color-key;
+    border-left: none;
+    padding-bottom: 10px;
+    @include fz(18, 18, 500);
+  }
 }
