@@ -27,6 +27,8 @@
 }
 
 // アンダーラインアニメーション
+// $type(アニメーションタイプ): fade, slide
+// $dir(アニメーションの方向): fade(top, bottom) slide(left-right, left-in-right, right-left, right-in-left, center)
 @mixin hover-underline($type: fade, $dir: null, $weight: 2px, $color: #000) {
   @if $dir == null {
     @if $type == fade {
