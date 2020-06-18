@@ -1,30 +1,31 @@
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	font-family: $font-family-base;
-	font-size: $font-size-base;
-	font-weight: $font-weight-base;
-	color: $color-text;
-	line-height: $line-height-base;
-	background: $color-background;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	overflow-x: hidden;
-	overflow-wrap: break-word;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  color: $color-text;
+  line-height: $line-height-base;
+  background: $color-background;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  overscroll-behavior: none;
 }
 
 article,
@@ -34,7 +35,7 @@ header,
 nav,
 section,
 main {
-	display: block;
+  display: block;
 }
 
 h1,
@@ -100,82 +101,82 @@ thead,
 tr,
 th,
 td {
-	margin: 0;
-	padding: 0;
-	border: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 a {
-	color: inherit;
-	outline: none;
+  color: inherit;
+  outline: none;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	border: none;
-	vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  border: none;
+  vertical-align: top;
 }
 
 video {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 code,
 kbd,
 pre,
 samp {
-	font-family: $font-family-code;
-	font-size: inherit;
+  font-family: $font-family-code;
+  font-size: inherit;
 }
 
 ul,
 ol {
-	list-style: none;
+  list-style: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-	width: 100%;
-	border: 1px solid $table-border-color;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid $table-border-color;
 }
 
 th,
 td {
-	padding: 4px 6px;
-	text-align: left;
-	vertical-align: top;
-	border: 1px solid $table-border-color;
+  padding: 4px 6px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid $table-border-color;
 }
 
 th {
-	background: $table-th-background;
-	color: $table-th-color;
+  background: $table-th-background;
+  color: $table-th-color;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote::after,
 blockquote::before,
 q::after,
 q::before {
-	content: "";
-	content: none;
+  content: "";
+  content: none;
 }
 
 address {
-	font-style: normal;
+  font-style: normal;
 }
 
 input,
 textarea,
 select {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 [type="text"],
@@ -190,32 +191,26 @@ select {
 [type="week"],
 [type="time"],
 [type="datetime-local"] {
-
-	@extend %text;
+  @extend %text;
 }
 
 textarea {
-
-	@extend %textarea;
+  @extend %textarea;
 }
 
 [type="submit"],
 [type="button"] {
-
-	@extend %button;
+  @extend %button;
 }
 
 [type="radio"] {
-
-	@extend %radio;
+  @extend %radio;
 }
 
 [type="checkbox"] {
-
-	@extend %checkbox;
+  @extend %checkbox;
 }
 
 select {
-
-	@extend %select;
+  @extend %select;
 }
