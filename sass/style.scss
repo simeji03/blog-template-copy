@@ -67,6 +67,9 @@ header {
     margin: 51px auto;
     text-align: center;
     @include fz(33, 40, 400);
+    a {
+      text-decoration: none;
+    }
     span {
       color: $color-key;
     }
@@ -99,6 +102,14 @@ header {
     .c-card {
       position: relative;
       height: 100%;
+      transition: 0.3s;
+      &:hover {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+        transform: translate(0, -3px);
+      }
+      .float-animation {
+        text-decoration: none;
+      }
       .c-card__img {
         .c-card__label {
           position: absolute;
@@ -147,11 +158,17 @@ header {
       margin: 50px auto 0;
       width: 110px;
       height: 110px;
+      border-radius: 10em;
+      overflow: hidden;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 50%;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
     .c-card__body {
@@ -171,9 +188,15 @@ header {
         @include fz(14, 21, 200);
       }
       .c-button {
+        padding: 10px 40px;
         background-color: #aaaaaa;
         border: 3px double #ffffff;
         border-radius: 10em;
+        transition: 0.3s;
+        @include fz(10, 10, 200);
+        &:hover {
+          background-color: rgba($color: #aaaaaa, $alpha: 0.7);
+        }
       }
     }
     .c-card__follow {
@@ -194,6 +217,10 @@ header {
             background-color: #aed553;
             padding: 8px;
             @include fz(20, 20, 200);
+            transition: 0.3s;
+            &:hover {
+              transform: scale(1.1);
+            }
           }
         }
       }
@@ -257,18 +284,49 @@ header {
     border: none;
     color: $color-text--thin;
     width: 100%;
-    option {
-    }
   }
 }
 
 .tag-item {
   background-color: #eeeeee;
-  margin: 5px;
+  color: #444444;
+  cursor: pointer;
+  margin: 3px;
   padding: 5px 7px;
   @include fz(10, 10, 200);
+  transition: 0.3s;
+  .fa-tag {
+    padding-right: 3px;
+  }
   .footer-tag & {
+    color: #ffffff;
     background-color: #706e76;
+  }
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+.search {
+  .search-form {
+    position: relative;
+    .c-text {
+      padding: 6px 10px;
+      border: 1px solid #ddd;
+      border-radius: 10em;
+      color: $color-text--thin;
+    }
+    .fa-search {
+      position: absolute;
+      top: 50%;
+      right: 2px;
+      padding: 7px 10px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      border-radius: 10em;
+      color: $color-text--thin;
+    }
   }
 }
 
@@ -277,12 +335,18 @@ header {
   .footer-menu {
     .l-row--padding {
       padding: 1rem;
+      .l-row__col {
+        &:first-child {
+          padding-right: 3rem;
+        }
+      }
     }
     .footer-logo {
-      margin: 20px auto 30px;
-      width: 120px;
-      img {
-        width: 100%;
+      margin: 0 auto 20px;
+      h1 {
+        font-family: "Josefin Slab", serif;
+        letter-spacing: 5px;
+        @include fz(60, 60, 400);
       }
     }
     .footer-text {
@@ -299,6 +363,10 @@ header {
         padding: 7px 50px;
         background-color: $color-accent;
         border-radius: 10em;
+        transition: 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
       }
     }
     .c-list {
@@ -307,6 +375,10 @@ header {
       li {
         a {
           @include fz(11, 17, 300);
+          transition: 0.3s;
+          &:hover {
+            margin-left: 3px;
+          }
           .fas {
             margin-right: 5px;
           }
@@ -328,6 +400,14 @@ header {
           }
         }
       }
+    }
+  }
+  .copyright {
+    text-align: center;
+    padding: 12px 0 13px;
+    border-top: 1px solid #ffffff;
+    .copyright__text {
+      @include fz(11, 11, 300);
     }
   }
 }

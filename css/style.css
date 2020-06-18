@@ -2409,27 +2409,111 @@ select {
 }
 
 .u-fadein {
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-  opacity: 0;
+  -webkit-animation: fadeIn 1s ease 0s 1 normal;
+          animation: fadeIn 1s ease 0s 1 normal;
 }
 
-.u-fadein.is-anim {
-  opacity: 1;
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.u-fadein--slow {
+  -webkit-animation: fadeInSlow 1s ease-in 0s 1 normal;
+          animation: fadeInSlow 1s ease-in 0s 1 normal;
+}
+
+@-webkit-keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInSlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .u-fadein-up {
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
-  -webkit-transform: translate(0, 0.8rem);
-          transform: translate(0, 0.8rem);
-  opacity: 0;
+  -webkit-animation: fadeInUp 1s ease 0s 1 normal;
+          animation: fadeInUp 1s ease 0s 1 normal;
 }
 
-.u-fadein-up.is-anim {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-  opacity: 1;
+@-webkit-keyframes fadeInUp {
+  0% {
+    -webkit-transform: translate(0, 1.3rem);
+            transform: translate(0, 1.3rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    -webkit-transform: translate(0, 1.3rem);
+            transform: translate(0, 1.3rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.u-fadein-up--slow {
+  -webkit-animation: fadeInUpSlow 1s ease-in 0s 1 normal;
+          animation: fadeInUpSlow 1s ease-in 0s 1 normal;
+}
+
+@-webkit-keyframes fadeInUpSlow {
+  0% {
+    -webkit-transform: translate(0, 1.3rem);
+            transform: translate(0, 1.3rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUpSlow {
+  0% {
+    -webkit-transform: translate(0, 1.3rem);
+            transform: translate(0, 1.3rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+    opacity: 1;
+  }
 }
 
 .u-m-auto {
@@ -10360,6 +10444,10 @@ header .header-logo {
   line-height: 1.21212;
 }
 
+header .header-logo a {
+  text-decoration: none;
+}
+
 header .header-logo span {
   color: #9acc1e;
 }
@@ -10422,6 +10510,19 @@ header .c-navigation .navigation-item a:hover:after {
 .p-main article .c-card {
   position: relative;
   height: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.p-main article .c-card:hover {
+  -webkit-box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+          box-shadow: 0 6px 14px rgba(0, 0, 0, 0.24);
+  -webkit-transform: translate(0, -3px);
+          transform: translate(0, -3px);
+}
+
+.p-main article .c-card .float-animation {
+  text-decoration: none;
 }
 
 .p-main article .c-card .c-card__img .c-card__label {
@@ -10479,6 +10580,8 @@ header .c-navigation .navigation-item a:hover:after {
   margin: 50px auto 0;
   width: 110px;
   height: 110px;
+  border-radius: 10em;
+  overflow: hidden;
 }
 
 .profile .c-card .c-card__img img {
@@ -10487,6 +10590,13 @@ header .c-navigation .navigation-item a:hover:after {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile .c-card .c-card__img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .profile .c-card .c-card__body {
@@ -10523,9 +10633,21 @@ header .c-navigation .navigation-item a:hover:after {
 }
 
 .profile .c-card .c-card__body .c-button {
+  padding: 10px 40px;
   background-color: #aaaaaa;
   border: 3px double #ffffff;
   border-radius: 10em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 10px;
+  /*IE9以下で反映されるよう記述*/
+  font-size: 7.14286/remrem;
+  font-weight: 200;
+  line-height: 1;
+}
+
+.profile .c-card .c-card__body .c-button:hover {
+  background-color: rgba(170, 170, 170, 0.7);
 }
 
 .profile .c-card .c-card__follow {
@@ -10564,6 +10686,13 @@ header .c-navigation .navigation-item a:hover:after {
   font-size: 14.28571/remrem;
   font-weight: 200;
   line-height: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.profile .c-card .c-card__follow .c-card__icons .c-card__icon .fab:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .aside-parts .l-inner {
@@ -10647,30 +10776,76 @@ header .c-navigation .navigation-item a:hover:after {
 
 .tag-item {
   background-color: #eeeeee;
-  margin: 5px;
+  color: #444444;
+  cursor: pointer;
+  margin: 3px;
   padding: 5px 7px;
   font-size: 10px;
   /*IE9以下で反映されるよう記述*/
   font-size: 7.14286/remrem;
   font-weight: 200;
   line-height: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tag-item .fa-tag {
+  padding-right: 3px;
 }
 
 .footer-tag .tag-item {
+  color: #ffffff;
   background-color: #706e76;
+}
+
+.tag-item:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.search .search-form {
+  position: relative;
+}
+
+.search .search-form .c-text {
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 10em;
+  color: #888888;
+}
+
+.search .search-form .fa-search {
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  padding: 7px 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #fff;
+  border-radius: 10em;
+  color: #888888;
 }
 
 .l-footer .footer-menu .l-row--padding {
   padding: 1rem;
 }
 
-.l-footer .footer-menu .footer-logo {
-  margin: 20px auto 30px;
-  width: 120px;
+.l-footer .footer-menu .l-row--padding .l-row__col:first-child {
+  padding-right: 3rem;
 }
 
-.l-footer .footer-menu .footer-logo img {
-  width: 100%;
+.l-footer .footer-menu .footer-logo {
+  margin: 0 auto 20px;
+}
+
+.l-footer .footer-menu .footer-logo h1 {
+  font-family: "Josefin Slab", serif;
+  letter-spacing: 5px;
+  font-size: 60px;
+  /*IE9以下で反映されるよう記述*/
+  font-size: 42.85714/remrem;
+  font-weight: 400;
+  line-height: 1;
 }
 
 .l-footer .footer-menu .footer-text {
@@ -10689,6 +10864,13 @@ header .c-navigation .navigation-item a:hover:after {
   padding: 7px 50px;
   background-color: #e22256;
   border-radius: 10em;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-footer .footer-menu .download-btn .c-button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .l-footer .footer-menu .c-list {
@@ -10702,6 +10884,12 @@ header .c-navigation .navigation-item a:hover:after {
   font-size: 7.85714/remrem;
   font-weight: 300;
   line-height: 1.54545;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.l-footer .footer-menu .c-list li a:hover {
+  margin-left: 3px;
 }
 
 .l-footer .footer-menu .c-list li a .fas {
@@ -10726,6 +10914,20 @@ header .c-navigation .navigation-item a:hover:after {
   /*IE9以下で反映されるよう記述*/
   font-size: 8.57143/remrem;
   font-weight: 200;
+  line-height: 1;
+}
+
+.l-footer .copyright {
+  text-align: center;
+  padding: 12px 0 13px;
+  border-top: 1px solid #ffffff;
+}
+
+.l-footer .copyright .copyright__text {
+  font-size: 11px;
+  /*IE9以下で反映されるよう記述*/
+  font-size: 7.85714/remrem;
+  font-weight: 300;
   line-height: 1;
 }
 
